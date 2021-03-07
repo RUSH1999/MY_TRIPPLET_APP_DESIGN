@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#F6F6F6">
+
+    <data>
+        <variable
+            android:name="viewmodel"
+            android:type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".ui.auth.customer.LoginFragment">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/trippleatt_logo"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:text="LOGIN"
+            android:textAlignment="center"
+            android:textColor="#2B2A2A"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:layout_width="10dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="0.20"
+                android:backgroundTint="#2B2A2A"
+                android:enabled="false"
+                android:fontFamily="@font/verdana"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="+91"
+                android:textAlignment="center"
+                android:textColor="#2B2A2A"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/phone_number"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="0.8"
+                android:backgroundTint="#2B2A2A"
+                android:fontFamily="@font/verdana"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@={viewmodel.phonenumber}"
+                android:textColor="#2B2A2A"
+                android:textColorHint="#2B2A2A"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/button_login"
+            android:backgroundTint="#0B0B0B"
+            android:fontFamily="@font/verdana"
+            android:onClick="@{viewmodel.sendVerifiactionCode}"
+            android:text="@string/send_otp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@android:color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50px"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"
+                android:text="OR"
+                android:textColor="#2B2A2A"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+            <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:text="ARE YOU A"
+                        android:textColor="#2B2A2A"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/underline_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/verdana"
+                        android:onClick="@{viewmodel.gotoBusilogin}"
+                        android:text=" BUSINESS"
+                        android:textColor="#38AE38"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/verdana"
+                        android:text=" ?"
+                        android:textColor="#2B2A2A"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F6F6F6"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/verdana"
+                android:onClick="@{viewmodel.gotoDriverlogin}"
+                android:text="Shop With Us"
+                android:textAlignment="center"
+                android:textColor="#393939"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+</layout>

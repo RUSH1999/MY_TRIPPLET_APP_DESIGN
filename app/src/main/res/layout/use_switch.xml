@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ToggleButton
+        android:id="@+id/toggle_menu_online_offline"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:layout_marginLeft="10dp"
+        android:textOff="Offline"
+        android:textOn="Online"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_menu_offline"/>
+</LinearLayout>

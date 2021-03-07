@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.seller.loose_product.AddProductLooseFragment">
+
+    <data>
+
+        <variable
+            android:name="viewmodel"
+            android:type="com.tripplleat.trippleattcustomer.ui.home.viewmodel.HomeViewModal" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinProductList"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/stroke_otp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:entries="@array/product_list"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/stroke_otp"
+                android:hint="Enter the Product Name"
+                android:text="@={viewmodel.productName}"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp"
+                android:background="@drawable/stroke_otp"
+                android:padding="8dp"
+                tools:context=".ui.auth.driver.visibility">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="7"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Variant / Size Name"
+                        android:background="@null"
+                        android:padding="10dp"
+                        />
+
+                    <!--<RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:id="@+id/radioGroup"
+                        android:layout_marginBottom="10dp">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Packed"
+                            android:id="@+id/rbPacked"
+
+                            />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loose"
+                            android:checked="true"
+                            android:id="@+id/rbLoose"/>
+
+                    </RadioGroup>-->
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_packed_add_product"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Packed"
+                            android:padding="3dp"
+                            android:background="@drawable/radio_flat_selector"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/radio_flat_text_selector"
+
+                            />
+
+                        <RadioButton
+                            android:id="@+id/rb_loose_add_product"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Loose"
+                            android:checked="true"
+                            android:padding="3dp"
+                            android:background="@drawable/radio_flat_selector"
+                            android:button="@android:color/transparent"
+                            android:textColor="@color/radio_flat_text_selector"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:id="@+id/units">
+
+                        <RadioButton
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="KG"
+                            android:id="@+id/txtAddProductKg"
+                            android:textSize="18sp"
+                            android:textColor="@color/radio_flat_text_selector"
+                            android:background="@drawable/radio_flat_selector"
+                            android:textAlignment="center"
+                            android:checked="true"
+                            android:button="@android:color/transparent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:onClick="@{viewmodel.onLooseKgSelected}" />
+
+                        <RadioButton
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="Liter"
+                            android:id="@+id/txtAddProductLiter"
+                            android:onClick="@{viewmodel.onLooseLiterSelected}"
+                            android:textSize="18sp"
+                            android:textColor="@color/radio_flat_text_selector"
+                            android:background="@drawable/radio_flat_selector"
+                            android:textAlignment="center"
+                            android:button="@android:color/transparent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold" />
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="others type unit"
+                            android:id="@+id/txtotherunit"
+                            android:onClick="@{viewmodel.onLooseLiterSelected}"
+                            android:textSize="18sp"
+                            android:textColor="@color/radio_flat_text_selector"
+                            android:background="@drawable/radio_flat_selector"
+                            android:textAlignment="center"
+                            android:button="@android:color/transparent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+
+                android:background="@drawable/stroke_otp"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/edt_barcode_add_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:hint="Enter the Bar Code"
+                    android:padding="10dp"
+                    android:inputType="number" />
+
+                <ImageView
+                    android:id="@+id/btnBarcodeScan"
+                    android:layout_width="32dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_barcode_scan"
+                    android:text="Button" />
+            </RelativeLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/stroke_otp"
+                android:hint="Enter the Selling Price"
+                android:inputType="number"
+                android:text="@={viewmodel.sellingPrice}"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:layout_margin="15dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2.4"
+                    android:layout_height="wrap_content"
+                    android:text="Upload product Image"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_margin="15dp"/>
+
+                <!--<TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="@{viewmodel.onClickProductImageFile}"
+                    android:drawableStart="@drawable/ic_files"
+                    android:layout_margin="15dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:onClick="@{viewmodel.onClickProductImageCamera}"
+                    android:drawableStart="@drawable/ic_camera"
+                    android:layout_margin="15dp"/>-->
+
+                <ImageView
+                    android:id="@+id/btn_select_image_add_product"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/ic_files" />
+
+                <ImageView
+                    android:id="@+id/btn_select_image_camera_add_product"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.3"
+                    android:src="@drawable/ic_camera" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/stroke_otp"
+                android:hint="Enter the Current Stock"
+                android:inputType="number"
+                android:text="@={viewmodel.stock}"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/img_add_variant_add_product"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_margin="12dp"
+                android:background="@drawable/radio_flat_selected"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="Add Variant"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Submit For Publish"
+            android:onClick="@{viewmodel.onClickSubmitForPublish}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:padding="5dp"
+            android:background="#000000"
+            android:id="@+id/btnSubmitForPublish"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EAEAEA">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="#2D98EA"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/pp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:src="@drawable/trippleatt_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@id/pp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="vedant"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@id/pp"
+                android:paddingEnd="10dp"
+                android:text="Singh"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:layout_toEndOf="@id/pp"
+                android:paddingEnd="10dp"
+                android:text="\nSingh"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@id/pp"
+                android:text="4.5"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@android:color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/pp"
+                android:textAlignment="center"
+                android:text="100"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:textColor="@android:color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/pp"
+                android:textAlignment="center"
+                android:text="10"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@id/pp"
+                android:textAlignment="center"
+                android:text="Rating"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textColor="@android:color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/pp"
+                android:textAlignment="center"
+                android:text="Contribution"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:textColor="@android:color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/pp"
+                android:textAlignment="center"
+                android:text="Suggestions"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:elevation="8dp">
+
+        <TextView
+            android:textColor="#2D98EA"
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pp"
+            android:text="My Address"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#020202"
+            />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="25dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pp"
+            android:text="Mumbai,405685"
+            android:textSize="21sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:elevation="8dp">
+
+        <TextView
+            android:textColor="#2D98EA"
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pp"
+            android:text="Saved Cards"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#020202"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#3EE422"
+            android:fontFamily="@font/verdana"
+            android:onClick="@{viewmodel.sendVerifiactionCode}"
+            android:text="Add Now"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="600dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/verdana"
+            android:gravity="bottom"
+            android:onClick="@{viewmodel.Associated_account}"
+            android:text="Associated Account"
+            android:textColor="#2D98EA"
+            android:padding="10dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
