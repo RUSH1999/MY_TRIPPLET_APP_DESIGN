@@ -14,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.tripplleat.trippleattcustomer.R
 import com.tripplleat.trippleattcustomer.databinding.FragmentBusiLoginBinding
-import com.tripplleat.trippleattcustomer.databinding.FragmentLoginBinding
 import com.tripplleat.trippleattcustomer.ui.auth.customer.AuthViewModelFactory
 import com.tripplleat.trippleattcustomer.ui.auth.listeners.AuthListener
 import com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal
@@ -34,9 +33,8 @@ class busiLoginFragment : Fragment(),KodeinAware,AuthListener {
         savedInstanceState: Bundle?
     ): View? {
 
-        val binding: FragmentBusiLoginBinding =
-            DataBindingUtil.inflate(inflater,R.layout.fragment_busi_login,container,false)
-        val  viewModal= ViewModelProvider(requireActivity(), factory).get(AuthViewModal::class.java)
+        val binding: FragmentBusiLoginBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_busi_login,container,false)
+        val viewModal= ViewModelProvider(requireActivity(), factory).get(AuthViewModal::class.java)
         binding.viewmodel=viewModal
         viewModal.userType="BUSINESS"
         viewModal.authListener = this

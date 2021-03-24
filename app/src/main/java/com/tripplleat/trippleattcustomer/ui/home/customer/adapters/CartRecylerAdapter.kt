@@ -150,7 +150,7 @@ class CartRecylerAdapter(
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imgProduct: ImageView = view.findViewById(R.id.imgProductCart)
-        val txtRating: TextView = view.findViewById(R.id.txtProductRatingCart)
+
         val txtProductName: TextView = view.findViewById(R.id.txtProductNameCart)
         val txtVariantName: TextView = view.findViewById(R.id.txtVariantNameCart)
         val txtDescription: TextView = view.findViewById(R.id.txtDescriptionCart)

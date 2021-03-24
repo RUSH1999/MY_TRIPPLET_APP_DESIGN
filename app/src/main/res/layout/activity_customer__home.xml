@@ -31,6 +31,7 @@
             android:orientation="horizontal"
             >
             <ImageView
+                android:id="@+id/customerActivitynavHostFragment"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
                 android:src="@drawable/menu_hamburger"
@@ -73,7 +74,8 @@
                 android:id="@+id/imgCart"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_cart"/>
+                android:src="@drawable/ic_cart"
+                />
         </LinearLayout>
         <!--</com.google.android.material.navigation.NavigationView>-->
     </androidx.appcompat.widget.Toolbar>

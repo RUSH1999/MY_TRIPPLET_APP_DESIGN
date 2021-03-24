@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+    </data>
+
+<RelativeLayout
+
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:background="#F1F0F0">
 
-    <data>
-        <variable
-            android:name="viewmodel"
-            android:type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
-    </data>
+
+
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -19,6 +27,7 @@
     </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
+        android:id="@+id/busiLoginFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="0dp"
@@ -196,3 +205,4 @@
 
 
 </RelativeLayout>
+</layout>

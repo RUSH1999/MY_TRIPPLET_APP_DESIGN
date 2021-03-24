@@ -117,6 +117,7 @@
                               android:textStyle="bold"
                               />
                           <TextView
+                              android:id="@+id/txtProductQuantityCart"
                               android:textColor="@android:color/black"
                               android:layout_width="wrap_content"
                               android:paddingTop="5dp"

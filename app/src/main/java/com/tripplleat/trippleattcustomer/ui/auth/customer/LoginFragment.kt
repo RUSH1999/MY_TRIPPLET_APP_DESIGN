@@ -32,7 +32,7 @@ class LoginFragment : Fragment(), AuthListener,KodeinAware{
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentLoginBinding =DataBindingUtil.inflate(inflater,R.layout.activity_login,container,false)
+        val binding: FragmentLoginBinding =DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false)
         val  viewModal=ViewModelProvider(requireActivity(), factory).get(AuthViewModal::class.java)
 
         binding.viewmodel=viewModal

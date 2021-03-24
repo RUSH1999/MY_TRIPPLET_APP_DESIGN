@@ -173,10 +173,24 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"
             />
+
+        <TextView
+            android:id="@+id/countdown"
+            android:layout_marginTop="150dp"
+            android:paddingEnd="25dp"
+            android:paddingStart="25dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/verdana"
             android:onClick="@{viewmodel.gotoDriverlogin}"
             android:text="Deliver With Us"

@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.home.seller.loose_product.AddProductLooseFragment">
+    tools:context=".ui.home.seller.loose_product.AddProductLooseFragment"
+    >
 
     <data>
 
         <variable
-            android:name="viewmodel"
-            android:type="com.tripplleat.trippleattcustomer.ui.home.viewmodel.HomeViewModal" />
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.home.viewmodel.HomeViewModal" />
 
     </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -341,3 +350,4 @@
             android:layout_margin="10dp"/>
     </RelativeLayout>
 </RelativeLayout>
+</layout>

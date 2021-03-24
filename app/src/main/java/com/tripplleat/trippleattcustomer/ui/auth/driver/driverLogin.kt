@@ -16,7 +16,6 @@ import androidx.transition.Scene
 import androidx.transition.TransitionManager
 import com.tripplleat.trippleattcustomer.R
 import com.tripplleat.trippleattcustomer.databinding.FragmentDriverLoginBinding
-import com.tripplleat.trippleattcustomer.databinding.SelectvihicleBinding
 import com.tripplleat.trippleattcustomer.ui.auth.customer.AuthViewModelFactory
 import com.tripplleat.trippleattcustomer.ui.auth.listeners.AuthListener
 import com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal
@@ -47,8 +46,7 @@ class driverLogin : Fragment(), KodeinAware , AuthListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       val  binding: FragmentDriverLoginBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_driver_login, container, false)
+        val  binding: FragmentDriverLoginBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_driver_login, container, false)
         val  viewModal= ViewModelProvider(requireActivity(), factory).get(AuthViewModal::class.java)
         binding.viewmodel=viewModal
         viewModal.userType="DRIVER"

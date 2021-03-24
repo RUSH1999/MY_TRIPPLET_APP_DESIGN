@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<RelativeLayout
+
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:background="#F6F6F6">
+    >
 
     <data>
         <variable
-            android:name="viewmodel"
-            android:type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
+            name="viewmodel"
+            type="com.tripplleat.trippleattcustomer.ui.auth.viewmodel.AuthViewModal" />
     </data>
+    <RelativeLayout
+
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#F8F7F7">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </androidx.core.widget.NestedScrollView>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:layout_marginBottom="0dp"
         android:orientation="vertical"
         android:padding="20dp"
         tools:context=".ui.auth.customer.LoginFragment">
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
@@ -41,21 +44,19 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="10dp"
             android:text="LOGIN"
             android:textAlignment="center"
             android:textColor="#2B2A2A"
             android:textSize="35dp"
             android:textStyle="bold" />
-
+    </LinearLayout>
         <LinearLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
-
 
             <EditText
                 android:layout_width="10dp"
@@ -103,12 +104,14 @@
             android:background="@drawable/button_login"
             android:backgroundTint="#0B0B0B"
             android:fontFamily="@font/verdana"
-            android:onClick="@{viewmodel.sendVerifiactionCode}"
             android:text="@string/send_otp"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@android:color/white"
             android:textSize="21sp"
+            android:onClick="@{viewmodel.sendVerifiactionCode}"
             android:textStyle="bold" />
+
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -145,11 +148,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/verdana"
-                        android:onClick="@{viewmodel.gotoBusilogin}"
                         android:text=" BUSINESS"
                         android:textColor="#38AE38"
                         android:textSize="25sp"
+                        android:onClick="@{viewmodel.gotoBusilogin}"
                         android:textStyle="bold" />
+                       <!--- -->
+
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -177,16 +182,22 @@
                 android:gravity="bottom"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/verdana"
-                android:onClick="@{viewmodel.gotoDriverlogin}"
                 android:text="Shop With Us"
                 android:textAlignment="center"
                 android:textColor="#393939"
                 android:textSize="25dp"
+                android:onClick="@{viewmodel.gotoDriverlogin}"
                 android:textStyle="bold"
-                tools:ignore="RtlCompat" />
+                tools:ignore="RtlCompat"
+                />
+                <!--
+
+                -->
+
         </LinearLayout>
 
     </LinearLayout>
-</RelativeLayout>
 
+    </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
 </layout>

@@ -31,6 +31,7 @@ class busiSignupFragment : Fragment(),KodeinAware,fireUploadListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val binding : FragmentBusiSignupBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_busi_signup,container,false)
         viewModal = ViewModelProvider(requireActivity(),factory).get(AuthViewModal::class.java)
         binding.viewmodel=viewModal

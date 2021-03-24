@@ -68,7 +68,7 @@ class driverOtpVerification : Fragment() , AuthListener, KodeinAware, TextWatche
         otp4=binding.otp4
         otp5=binding.otp5
         otp6=binding.otp6
-        counter=binding.countdown
+
         resendcode=binding.resendCode
         otp1?.addTextChangedListener(this)
         otp2?.addTextChangedListener(this)
@@ -90,9 +90,7 @@ class driverOtpVerification : Fragment() , AuthListener, KodeinAware, TextWatche
             }
 
         })
-        otpcountdown.observe(viewLifecycleOwner, Observer {
-            binding.countdown.text=it?.toString()
-        })
+
 
         return binding.root
     }

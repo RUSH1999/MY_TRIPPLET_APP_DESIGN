@@ -85,8 +85,7 @@ otp1?.addTextChangedListener(this)
             }
 
         })
-        otpcountdown.observe(viewLifecycleOwner, Observer {
-binding.countdown.text=it?.toString()
+        otpcountdown.observe(viewLifecycleOwner, Observer { binding.countdown.text=it?.toString()
         })
 
         return binding.root
